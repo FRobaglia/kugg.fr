@@ -1,0 +1,28 @@
+.name {
+  margin: 8px;
+  font-size: 24px;
+  font-weight: bold;
+
+  span {
+    font-size: 16px;
+    color: $grey;
+  }
+
+  @include phone {
+    margin: 16px;
+    font-size: 36px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    margin: 24px;
+    font-size: 48px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+}

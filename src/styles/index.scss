@@ -1,9 +1,17 @@
 @import-normalize;
 
-$dark-blue: #192a56;
-$white: #f5f6fa;
+/* Vendors */
+@import 'vendors/reset';
 
+/* Config */
 @import 'config/fonts';
+@import 'config/variables';
+
+@import 'config/mixins';
+
+/* Components */
+@import 'components/Header';
+
 
 * {
   box-sizing: border-box;
@@ -11,13 +19,6 @@ $white: #f5f6fa;
 
 body {
   margin: 0;
-  background-color: $dark-blue;
-  color: $white;
   font-family: 'Roobert';
   overflow: hidden;
-}
-
-h1 {
-  font-size: 70px;
-  text-align: center;
 }
