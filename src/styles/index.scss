@@ -1,0 +1,23 @@
+@import-normalize;
+
+$dark-blue: #192a56;
+$white: #f5f6fa;
+
+@import 'config/fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $dark-blue;
+  color: $white;
+  font-family: 'Roobert';
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
