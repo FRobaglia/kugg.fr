@@ -1,5 +1,3 @@
-@import-normalize;
-
 /* Vendors */
 @import 'vendors/reset';
 
@@ -11,6 +9,7 @@
 
 /* Components */
 @import 'components/Header';
+@import 'components/Tags';
 
 
 * {
