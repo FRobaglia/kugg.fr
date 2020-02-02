@@ -18,14 +18,14 @@
 }
 
 body {
-  background: $white;
-  margin: 8px;
+  background-color: $white;
   color: $black;
+  margin: 8px;
   font-family: 'Roobert';
 }
 
 img {
-  display: block  ;
+  display: block;
 }
 
 @include phone {
