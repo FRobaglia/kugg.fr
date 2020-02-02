@@ -8,8 +8,9 @@
 @import 'config/mixins';
 
 /* Components */
-@import 'components/Header';
-@import 'components/Tags';
+@import 'components/header';
+@import 'components/tags';
+@import 'components/projects';
 
 
 *, *::before, *::after {
@@ -17,8 +18,24 @@
 }
 
 body {
-  margin: 0;
+  background: $white;
+  margin: 8px;
   color: $black;
   font-family: 'Roobert';
-  overflow: hidden;
+}
+
+img {
+  display: block  ;
+}
+
+@include phone {
+  body {
+    margin: 16px;
+  }
+}
+
+@include tablet {
+  body {
+    margin: 24px;
+  }
 }

@@ -1,0 +1,92 @@
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project {
+  width: 100%;
+  
+  @include tablet {
+    max-width: 400px;
+    margin: 24px 72px 24px 0;
+  }
+
+  .project-title {
+    margin-bottom: 16px;
+    font-weight: 900;
+    font-size: 28px;
+  }
+
+  .project-thumbnail {
+    margin-bottom: 16px;
+    width: 100%;
+
+    @include tablet {
+      opacity: .8;
+      transition: opacity .2s;
+    }
+  }
+
+  .project-description {
+    margin-bottom: 16px;
+    font-weight: 300;
+    line-height: 1.15;
+    font-size: 15px;
+    color: $grey;
+  }
+
+  .project-clickable-area {
+    display: block;
+
+    &:hover, &:focus {
+      h2 {
+        text-decoration: underline;
+      }
+      .project-thumbnail {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@mixin project-tag($c) {
+  color: $c;
+  font-size: 14px;
+
+  &::before {
+    content: '#'
+  }
+}
+  
+.project-tag {
+  user-select: none;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  outline: none;
+  border-radius: 50px;
+  white-space: nowrap;
+  font-weight: bold;
+  padding-right: 8px;
+
+  &.javascript {
+    @include project-tag($yellow)
+  }
+  
+  &.game {
+    @include project-tag($red)
+  }
+  
+  &.react {
+    @include project-tag($blue)
+  }
+  
+  &.vue {
+    @include project-tag($green)
+  }
+  
+  &.php {
+    @include project-tag($purple)
+  }
+  
+}
+

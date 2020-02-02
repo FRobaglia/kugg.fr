@@ -12,9 +12,10 @@ class Tag extends React.Component {
   }
   render() {
     return (
-        <div className={`tag tag-${this.props.data.color} ${this.state.checked ? 'checked' : ''}`} onClick={this.handleClick}>
-          {this.props.data.name}
-        </div> 
+        <li tabIndex="0" className={`tag tag-${this.props.tag.slug} ${this.state.checked ? 'checked' : ''}`} onClick={this.handleClick}>
+          <div className="tooltip"> {this.props.tag.tooltip} </div>
+          {this.props.tag.name}
+        </li> 
     )
   }
 

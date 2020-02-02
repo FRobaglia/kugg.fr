@@ -13,23 +13,3 @@
 @mixin large {
   @media (min-width: $large) { @content; }
 }
-
-@each $color in $colors {
-  @keyframes pulse-#{$color} {
-    0% { box-shadow: 0 0 0 0 $color; }
-  }
-}
-
-@mixin color($c) {
-  color: $c;
-  border: 1.5px solid $c;
-
-  &:hover {
-    background-color: transparentize($color: $c, $amount: 0.90)
-  }
-
-  &.checked {
-    background-color: transparentize($color: $c, $amount: 0.75);
-    animation: keyframes-#{$c} 1s;
-  }
-}

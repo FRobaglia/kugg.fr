@@ -1,38 +1,107 @@
+@mixin tag($c) {
+  color: $c;
+  border: 1.5px solid $c;
+
+  &:hover, &:focus {
+    background-color: transparentize($color: $c, $amount: 0.88);
+  }
+
+  &.checked {
+    background-color: $c;
+    box-shadow: inset -50px 0 0 0 $c,
+    inset 50px 0 0 0 $c;  
+  }
+}
 
 .tag {
+  position: relative;
   user-select: none;
   display: inline-block;
-  background: transparent;
-	color: grey;
-	border: 1.5px solid grey;
-  padding: 8px 16px;
-  border-radius: 100px;
-  min-width: 120px;
+  padding: 8px 32px;
+  border: 1.5px solid $grey;
+  color: $grey;
   text-align: center;
-  margin: 0px 20px;
-	outline: none;
+  margin: 8px 0;
+  outline: none;  
 	cursor: pointer;
-  position: relative;
-  transition: background-color .3s;
-  box-shadow: 0 0 0 16px rgba(#fff, 0);
+  transition: .2s;
+  border-radius: 50px;
+  width: 100%;
+  white-space: nowrap;
 
-  &.tag-yellow {
-    @include color($yellow)
+  &:nth-of-type(1) {
+    margin-top: 32px;
+  }
+
+  @include tablet {
+    margin: 24px 24px 0 0;
+    width: auto;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s;
+    white-space: normal;
+    transform: translateX(-50%);
+    width: 160px;
+    font-size: 13px;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    background: $black;
+    color: $white;
+    top: 150%;
+    left: 50%;
+    line-height: 1.25;
+    border-radius: 5px;
+    padding: 8px;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent $black transparent;
+    }
+  }
+
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &:hover, &:focus {
+    outline: none;
+  }
+
+  &.checked {
+    color: $white;
   }
   
-  &.tag-green {
-    @include color($green)
-  }
-  
-  &.tag-red {
-    @include color($red)
-  }
-  
-  &.tag-cyan {
-    @include color($cyan)
-  }
-  
-  &.tag-purple {
-    @include color($purple)
-  }
+}
+
+.tag-javascript {
+  @include tag($yellow)
+}
+
+.tag-game {
+  @include tag($red)
+}
+
+.tag-react {
+  @include tag($blue)
+}
+
+.tag-vue {
+  @include tag($green)
+}
+
+.tag-php {
+  @include tag($purple)
 }
