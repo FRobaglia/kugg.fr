@@ -43,19 +43,26 @@ class ProjectArea extends React.Component {
           checked: false,
           id: 5
         },
+        { 
+          slug: 'integration', 
+          name: 'Intégration', 
+          tooltip: "Les projets ayant nécessité une grosse étape d'intégration HTML/CSS (templating HTML, animations CSS...)",
+          checked: false,
+          id: 6
+        },
         {
           slug: 'perso', 
           name: 'Projets personnels', 
           tooltip: 'Les projets que j\'ai développé sur mon temps libre.',
           checked: false,
-          id: 6
+          id: 7
         },
         {
           slug: 'school', 
           name: 'Projets scolaires',
           tooltip: 'Projets effectués en "semaine intensive", période de 4 jours dans le cadre de ma formation durant laquelle des groupes de 5 élèves créent un projet en partant de zéro.',
           checked: false,
-          id: 7
+          id: 8
         }
         
       ]
