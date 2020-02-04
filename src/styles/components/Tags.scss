@@ -2,7 +2,7 @@
   color: $c;
   border: 1.5px solid $c;
 
-  &:hover, &:focus {
+  &:hover {
     background-color: transparentize($color: $c, $amount: 0.88);
   }
 
@@ -18,16 +18,17 @@
   user-select: none;
   display: inline-block;
   padding: 8px 32px;
-  border: 1.5px solid $grey;
-  color: $grey;
+  border: 1.5px solid $black;
+  color: $black;
   text-align: center;
   margin: 8px 0;
   outline: none;  
 	cursor: pointer;
   transition: .2s;
-  border-radius: 50px;
   width: 100%;
   white-space: nowrap;
+
+  @include tag($black);
 
   &:nth-of-type(1) {
     margin-top: 32px;
@@ -83,25 +84,32 @@
   &.checked {
     color: $white;
   }
-  
 }
 
-.tag-javascript {
-  @include tag($yellow)
-}
+// .tag-javascript {
+//   @include tag($black)
+// }
 
-.tag-game {
-  @include tag($red)
-}
+// .tag-game {
+//   @include tag($black)
+// }
 
-.tag-react {
-  @include tag($blue)
-}
+// .tag-react {
+//   @include tag($black)
+// }
 
-.tag-vue {
-  @include tag($green)
-}
+// .tag-vue {
+//   @include tag($black)
+// }
 
-.tag-php {
-  @include tag($purple)
-}
+// .tag-php {
+//   @include tag($black)
+// }
+
+// .tag-perso {
+//   @include tag($black)
+// }
+
+// .tag-school {
+//   @include tag($black)
+// }

@@ -1,9 +1,23 @@
+@keyframes fadeIn {
+  0% {
+    transform-origin: center center;
+    transform: translateY(20px);
+    opacity: .3
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}
+
 .projects {
   display: flex;
   flex-flow: row wrap;
 }
 
 .project {
+  animation: fadeIn .2s;
   width: 100%;
   
   @include tablet {
@@ -15,6 +29,23 @@
     margin-bottom: 16px;
     font-weight: 900;
     font-size: 28px;
+
+    .github-logo {
+      content: "";
+      display: block;
+      background-image: url(../../assets/images/github-logo.svg);
+      background-size: cover;
+      margin-left: 8px;
+      transform: translateY(1.5px);
+      width: 20px;
+      height: 20px;
+      opacity: .67;
+      transition: opacity .2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .project-thumbnail {
@@ -22,8 +53,8 @@
     width: 100%;
 
     @include tablet {
-      opacity: .8;
-      transition: opacity .2s;
+      opacity: .87;
+      transition: opacity .2s, filter .2s;
     }
   }
 
@@ -51,14 +82,10 @@
 
 @mixin project-tag($c) {
   color: $c;
-  font-size: 14px;
-
-  &::before {
-    content: '#'
-  }
 }
   
 .project-tag {
+  font-size: 14px;
   user-select: none;
   display: inline-block;
   margin: 0 8px 8px 0;
@@ -67,6 +94,10 @@
   white-space: nowrap;
   font-weight: bold;
   padding-right: 8px;
+
+  &::before {
+    content: '#'
+  }
 
   &.javascript {
     @include project-tag($yellow)
@@ -86,6 +117,14 @@
   
   &.php {
     @include project-tag($purple)
+  }
+
+  &.perso {
+    @include project-tag($black)
+  }
+
+  &.school {
+    @include project-tag($pink)
   }
   
 }
