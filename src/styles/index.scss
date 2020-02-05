@@ -1,14 +1,14 @@
 /* Vendors */
 @import 'vendors/reset';
 
+@import 'config/mixins';
+@import 'components/header';
 /* Config */
 @import 'config/fonts';
 @import 'config/variables';
 
-@import 'config/mixins';
 
 /* Components */
-@import 'components/header';
 @import 'components/tags';
 @import 'components/projects';
 
