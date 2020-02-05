@@ -7,19 +7,19 @@
     color: $grey;
   }
 
-  @include phone {
-    font-size: 36px;
+  // @include phone {
+  //   font-size: 36px;
 
-    span {
-      font-size: 20px;
-    }
-  }
+  //   span {
+  //     font-size: 20px;
+  //   }
+  // }
 
-  @include tablet {
-    font-size: 48px;
+  // @include tablet {
+  //   font-size: 48px;
 
-    span {
-      font-size: 24px;
-    }
-  }
+  //   span {
+  //     font-size: 24px;
+  //   }
+  // }
 }
