@@ -17,7 +17,7 @@
   position: relative;
   user-select: none;
   display: inline-block;
-  padding: 8px 32px;
+  padding: 8px 12px;
   border: 1.5px solid $black;
   color: $black;
   text-align: center;
@@ -34,9 +34,14 @@
     margin-top: 32px;
   }
 
+  @include phone {
+    margin: 12px 12px 0 0;
+    width: auto;
+  }
+
   @include tablet {
     margin: 24px 24px 0 0;
-    width: auto;
+    padding: 8px 32px;
   }
 
   .tooltip {

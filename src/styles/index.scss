@@ -22,10 +22,15 @@ body {
   color: $black;
   margin: 8px;
   font-family: 'Roobert';
+  overflow-y: scroll;
 }
 
 img {
   display: block;
+}
+
+a[href=''] {
+  background: red;
 }
 
 @include phone {

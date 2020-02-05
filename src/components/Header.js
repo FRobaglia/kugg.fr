@@ -5,7 +5,7 @@ class Header extends React.Component {
     return (
       <header>
         <h1 className="name">
-          Félix Robaglia <span> | Projets </span>
+          Félix Robaglia <span> | Portfolio </span>
         </h1>
       </header>
     )

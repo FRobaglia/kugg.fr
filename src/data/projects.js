@@ -18,7 +18,7 @@ const projects = [
     description: 'Le site de M Publicité, la régie publicitaire du quotidien Le Monde.',
     link: 'https://mpublicite.fr',
     tags: [
-      'javascript', 'php', 'integration'
+      'javascript', 'php', 'integration', 'lemonde'
     ],
     id: 2
   },
@@ -70,29 +70,51 @@ const projects = [
     ],
     id: 6
   },
-  {
-    title: 'Tipsit',
-    slug: 'hero',
-    alt: 'Un tip, les posts sur Tipsit',
-    description: 'Semaine intensive de PHP de mon école. En groupe de 5, nous avions 4 jours pour créer la base d\'un réseau social, soit la publication de posts, et la possibilité de "like" sur ces derniers. Avec mon équipe, nous avons créé Tipsit, un réseau social dont le but est de partager ses connaissances à travers des "Tips", prenant la forme de post-it.',
-    link: 'https://uryo.netlify.com',
-    github: 'https://github.com/FRobaglia/uryo',
-    tags: [
-      'php', 'javascript', 'school'
-    ],
-    id: 7
-  },
+  // {
+  //   title: 'Tipsit',
+  //   slug: 'hero',
+  //   alt: 'Un tip, les posts sur Tipsit',
+  //   description: 'Semaine intensive de PHP de mon école. En groupe de 5, nous avions 4 jours pour créer la base d\'un réseau social, soit la publication de posts, et la possibilité de "like" sur ces derniers. Avec mon équipe, nous avons créé Tipsit, un réseau social dont le but est de partager ses connaissances à travers des "Tips", prenant la forme de post-it.',
+  //   link: 'https://uryo.netlify.com',
+  //   github: 'https://github.com/FRobaglia/uryo',
+  //   tags: [
+  //     'php', 'javascript', 'school'
+  //   ],
+  //   id: 7
+  // },
   {
     title: 'Ce portfolio',
-    slug: 'hero',
+    slug: 'ce-portfolio',
     alt: 'Capture d\'écran de ce portfolio',
     description: 'Mon portfolio est mon premier projet en React.',
-    link: 'https://kugg.fr',
     github: 'https://github.com/FRobaglia/kugg.fr',
     tags: [
       'react', 'perso'
     ],
     id: 8
+  },
+  {
+    title: 'Escapades en Grande-Bretagne',
+    slug: 'grande-bretagne-en-train',
+    alt: 'Page d\'accueil - Escapades en Grande-Bretagne',
+    description: 'Une initiative de l\'Office de tourisme de Grande-Bretagne, qui souhaitait faire un partenariat ponctuel avec Le Monde. Ce mini-site a pour but de promouvoir, auprès des lecteurs du Monde, la Grande-Bretagne comme destination touristique.',
+    link: 'https://la-grande-bretagne-en-train.lemonde.fr',
+    tags: [
+      'javascript', 'integration', 'lemonde'
+    ],
+    id: 9
+  },
+  {
+    title: 'Keycodes',
+    slug: 'keycodes',
+    alt: 'Site web Keycodes',
+    description: 'Mini-outil pour checker les différents "keyCode"  des touches du clavier. (identifiant numérique d\'une touche du clavier en JavaScript).',
+    link: 'https://keycode.netlify.com',
+    github: 'https://github.com/FRobaglia/KeyCodes',
+    tags: [
+      'javascript'
+    ],
+    id: 10
   },
 ]
 
