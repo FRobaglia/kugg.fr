@@ -70,18 +70,6 @@ const projects = [
     ],
     id: 6
   },
-  // {
-  //   title: 'Tipsit',
-  //   slug: 'hero',
-  //   alt: 'Un tip, les posts sur Tipsit',
-  //   description: 'Semaine intensive de PHP de mon école. En groupe de 5, nous avions 4 jours pour créer la base d\'un réseau social, soit la publication de posts, et la possibilité de "like" sur ces derniers. Avec mon équipe, nous avons créé Tipsit, un réseau social dont le but est de partager ses connaissances à travers des "Tips", prenant la forme de post-it.',
-  //   link: 'https://uryo.netlify.com',
-  //   github: 'https://github.com/FRobaglia/uryo',
-  //   tags: [
-  //     'php', 'javascript', 'school'
-  //   ],
-  //   id: 7
-  // },
   {
     title: 'Ce portfolio',
     slug: 'ce-portfolio',
@@ -115,6 +103,18 @@ const projects = [
       'javascript'
     ],
     id: 10
+  },
+  {
+    title: 'Arrondissement de Paris',
+    slug: 'arrondissements',
+    alt: 'Page 12ème arrondissement - Olympics',
+    description: 'Nous avions la consigne de créer une application dans le cadre des Jeux Olympiques de Paris 2024. Ce site web établit une note pour chaque arrondissement de Paris, pour renseigner les personnes étrangères à Paris voulant y séjourner le temps des jeux olympiques. On peut trier les arrondissements par différents critères.',
+    link: 'https://olympics.kugg.fr',
+    github: 'https://github.com/FRobaglia/ArrondissementsParis',
+    tags: [
+      'react', 'php', 'integration', 'school'
+    ],
+    id: 11
   },
 ]
 
