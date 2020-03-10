@@ -6,7 +6,7 @@ class ProjectCard extends React.Component {
         <article className="project">
           <a target="_blank" rel="noopener noreferrer" title={`${this.props.project.title} — Découvrir le site web`} href={this.props.project.link} className="project-clickable-area">
             <h2 className="project-title">
-              {this.props.project.title}
+              <span>{this.props.project.title}</span>&nbsp;
               {this.props.project.github && 
               <a className="github-logo" href={this.props.project.github} target="_blank" rel="noopener noreferrer" title={`Explorer le code source de '${this.props.project.title}' sur GitHub`}> 
                 <img alt="GitHub" src={require('../assets/images/github-logo.svg')} />

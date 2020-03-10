@@ -17,10 +17,16 @@
   box-sizing: border-box;
 }
 
+#root {
+  max-width: $large;
+  margin: 0 auto;
+}
+
 body {
   background-color: $white;
   color: $black;
   margin: 8px;
+  overflow-x: hidden;
   font-family: 'Roobert';
   overflow-y: scroll;
 }
@@ -31,6 +37,22 @@ img {
 
 a[href=''] {
   background: red;
+}
+
+footer {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    opacity: .8;
+    transition: opacity .2s;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: 1;
+    }
+  }
 }
 
 @include phone {

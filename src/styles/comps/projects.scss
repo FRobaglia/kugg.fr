@@ -17,14 +17,37 @@
   margin-top: 32px;
 }
 
+.no-project-found {
+  margin: 0 0 32px 0;
+  font-size: 32px;
+
+
+  @include tablet {
+    margin: 16px 0 48px 0;
+  }
+}
+
 .project {
   animation: fadeIn .2s;
   width: 100%;
   margin-bottom: 32px;
   
   @include tablet {
-    max-width: 400px;
-    margin-right: 72px;
+    width: calc(50% - 36px);
+    margin-right: 36px;
+    
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  @include large {
+    width: calc(33% - 44px);
+    margin-right: 72px !important;
+    
+    &:nth-child(3n) {
+      margin-right: 0 !important;
+    }
   }
 
   .project-title {
@@ -32,13 +55,8 @@
     font-weight: 900;
     font-size: 26px;
 
-    @include tablet {
-      white-space: nowrap;
-    }
-
     .github-logo {
       display: inline-block;
-      margin-left: 8px;
       width: 20px;
       height: 20px;
       opacity: .67;
@@ -62,7 +80,6 @@
     width: 100%;
 
     @include tablet {
-      height: 225px;
       opacity: .83;
       transition: opacity .2s;
     }
@@ -80,7 +97,7 @@
     display: block;
 
     &:hover, &:focus {
-      h2 {
+      h2 span{
         text-decoration: underline;
       }
       .project-thumbnail {

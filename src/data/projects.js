@@ -1,13 +1,13 @@
 const projects = [
   {
-    title: 'FatFinger',
-    slug: 'fatfinger',
-    alt: 'Page d\'accueil - FatFinger',
-    description: 'Un jeu d\'adresse pour s\'entraîner en dactylographie, vous avez 30 secondes pour taper le plus de mots possibles au clavier. Trois collections de mots différentes sont jouables : les mots anglais les plus utilisés, des mots en rapport avec le web et le développement, et des expressions javascript.',
-    link: 'https://fatfinger.netlify.com',
-    github: 'https://github.com/FRobaglia/FatFinger',
+    title: 'Arrondissements de Paris',
+    slug: 'arrondissements',
+    alt: 'Page 12ème arrondissement - Olympics',
+    description: 'Projet de groupe. Nous avions la consigne de créer une application dans le cadre des Jeux Olympiques de Paris 2024. Ce site web établit une note pour chaque arrondissement de Paris, pour renseigner les personnes étrangères à Paris voulant y séjourner le temps des jeux olympiques. On peut trier les arrondissements par différents critères.',
+    link: 'https://olympics.kugg.fr',
+    github: 'https://github.com/FRobaglia/ArrondissementsParis',
     tags: [
-      'javascript', 'game', 'perso'
+      'react', 'php', 'integration', 'school'
     ],
     id: 1
   },
@@ -38,7 +38,7 @@ const projects = [
     title: 'TFT Legends',
     slug: 'tft-legends',
     alt: 'Page des champions - TFT Legends',
-    description: 'Un site ayant pour but de donner des informations aux joueurs de Teamfight Tacticts, un jeu de Riot Games, l\'éditeur de League of Legends. La page champion permet de se renseigner sur les capacités de chacuns des champions du jeu. Les joueurs peuvent également taper un pseudo sur la barre de recherche pour voir leur rang en temps réel, fourni par l\'API de Riot Games.',
+    description: 'Un site ayant pour but de donner des informations aux joueurs de Teamfight Tactics, un jeu de Riot Games, l\'éditeur de League of Legends. La page Champions permet de se renseigner sur les capacités de chacuns des personnages du jeu. Le tracker permet de taper le pseudo d\'un joueur sur la barre de recherche pour voir son rang en temps réel, fourni par l\'API de Riot Games.',
     link: 'https://legendstft.com/champions',
     github: 'https://github.com/FRobaglia/tftlegends',
     tags: [
@@ -71,15 +71,16 @@ const projects = [
     id: 6
   },
   {
-    title: 'Ce portfolio',
-    slug: 'ce-portfolio',
-    alt: 'Capture d\'écran de ce portfolio',
-    description: 'Mon portfolio est mon premier projet en React.',
-    github: 'https://github.com/FRobaglia/kugg.fr',
+    title: 'FatFinger',
+    slug: 'fatfinger',
+    alt: 'Page d\'accueil - FatFinger',
+    description: 'Un jeu d\'adresse pour s\'entraîner en dactylographie, vous avez 30 secondes pour taper le plus de mots possibles au clavier. Trois collections de mots différentes sont jouables : les mots anglais les plus utilisés, des mots en rapport avec le web et le développement, et des expressions javascript.',
+    link: 'https://fatfinger.netlify.com',
+    github: 'https://github.com/FRobaglia/FatFinger',
     tags: [
-      'react', 'perso'
+      'javascript', 'game', 'perso'
     ],
-    id: 8
+    id: 7
   },
   {
     title: 'Escapades en Grande-Bretagne',
@@ -90,7 +91,7 @@ const projects = [
     tags: [
       'javascript', 'integration', 'lemonde'
     ],
-    id: 9
+    id: 8
   },
   {
     title: 'Keycodes',
@@ -102,20 +103,19 @@ const projects = [
     tags: [
       'javascript'
     ],
-    id: 10
+    id: 9
   },
   {
-    title: 'Arrondissement de Paris',
-    slug: 'arrondissements',
-    alt: 'Page 12ème arrondissement - Olympics',
-    description: 'Nous avions la consigne de créer une application dans le cadre des Jeux Olympiques de Paris 2024. Ce site web établit une note pour chaque arrondissement de Paris, pour renseigner les personnes étrangères à Paris voulant y séjourner le temps des jeux olympiques. On peut trier les arrondissements par différents critères.',
-    link: 'https://olympics.kugg.fr',
-    github: 'https://github.com/FRobaglia/ArrondissementsParis',
+    title: 'Ce portfolio',
+    slug: 'ce-portfolio',
+    alt: 'Capture d\'écran de ce portfolio',
+    description: 'Mon portfolio est mon premier projet en React.',
+    github: 'https://github.com/FRobaglia/kugg.fr',
     tags: [
-      'react', 'php', 'integration', 'school'
+      'react', 'perso'
     ],
-    id: 11
-  },
+    id: 10
+  }
 ]
 
 export default projects
