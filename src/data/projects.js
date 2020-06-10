@@ -38,7 +38,7 @@ const projects = [
     title: 'TFT Legends',
     slug: 'tft-legends',
     alt: 'Page des champions - TFT Legends',
-    description: 'Un site ayant pour but de donner des informations aux joueurs de Teamfight Tactics, un jeu édité par Riot Games, créteur de League of Legends notamment. La partie \'Champions\' permet de se renseigner sur les capacités de chacuns des personnages du jeu. Le tracker permet de taper le pseudo d\'un joueur sur la barre de recherche pour voir son rang en temps réel, à l\'aide des données récupérées depuis l\'API de Riot Games.',
+    description: 'Un site ayant pour but de donner des informations aux joueurs de Teamfight Tactics, un jeu édité par Riot Games, créateur de League of Legends notamment. La partie \'Champions\' permet de se renseigner sur les capacités de chacuns des personnages du jeu. Le tracker permet de taper le pseudo d\'un joueur sur la barre de recherche pour voir son rang en temps réel, à l\'aide des données récupérées depuis l\'API de Riot Games.',
     link: 'https://legendstft.com/champions',
     github: 'https://github.com/FRobaglia/tftlegends',
     tags: [

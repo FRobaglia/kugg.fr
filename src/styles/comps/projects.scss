@@ -18,6 +18,7 @@
 }
 
 .no-project-found {
+  animation: fadeIn .2s;
   margin: 0 0 32px 0;
   font-size: 32px;
 
@@ -88,8 +89,8 @@
   .project-description {
     margin-bottom: 16px;
     font-weight: 300;
-    line-height: 1.15;
-    font-size: 15px;
+    line-height: 1.28;
+    font-size: 14px;
     color: $grey;
   }
 
