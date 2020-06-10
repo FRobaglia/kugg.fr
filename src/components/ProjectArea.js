@@ -12,20 +12,21 @@ class ProjectArea extends React.Component {
         {
           slug: 'javascript', 
           name: 'JavaScript', 
-          tooltip: "Les projets faits en javascript \"natif\", qui n'utilisent pas de framework javascript externe.",
+          tooltip: "Les projets faits en JavaScript \"natif\", qui n'utilisent pas de framework JavaScript externe.",
           checked: false,
           id: 1
         },
         {
           slug: 'vue', 
           name: 'Vue.js', 
-          tooltip: "Les projets utilisant le framework javascript Vue.js, ayant vu le jour en 2014.", 
+          tooltip: "Les projets utilisant le framework JavaScript Vue.js.", 
+          checked: false,
           id: 2
         },
         {
           slug: 'react', 
           name: 'React.js', 
-          tooltip: "Les projets utilisant le framework javascript React, développé par Facebook en 2013.",
+          tooltip: "Les projets utilisant le framework JavaScript React.",
           checked: false,
           id: 3
         },
@@ -46,7 +47,7 @@ class ProjectArea extends React.Component {
         {
           slug: 'school', 
           name: 'Projets scolaires',
-          tooltip: 'Les projets effectués durant des "semaines intensives", période de 4 jours dans le cadre de ma formation durant laquelle des groupes de 5 élèves créent un projet en partant de zéro.',
+          tooltip: 'Les projets effectués durant des "semaines intensives", période de 4 jours dans le cadre de ma formation durant laquelle un projet est imaginé en partant de zéro, en groupe de 5.',
           checked: false,
           id: 6
         },
@@ -89,7 +90,7 @@ class ProjectArea extends React.Component {
         <div className="projects">
           {this.getProjectsThatShouldAppear()}
           { (!this.atLeastOneProjectIsShowing()) 
-          ? <div className="no-project-found"> Aucun projet ne contient tous les tags sélectionnés.</div> 
+          ? <div className="no-project-found"> Aucun projet ne comporte ces {this.state.tags.filter(tag => tag.checked).length} tags.</div> 
           : null}
         </div>
       </div>

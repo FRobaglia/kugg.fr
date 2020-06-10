@@ -55,6 +55,10 @@ footer {
   }
 }
 
+strong {
+  font-weight: bold;
+}
+
 @include phone {
   body {
     margin: 16px;

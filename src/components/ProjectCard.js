@@ -14,7 +14,10 @@ class ProjectCard extends React.Component {
               }
             </h2>
             <img src={require(`../assets/images/${this.props.project.slug}.png`)} className="project-thumbnail" alt={this.props.project.alt} />
-            <p className="project-description"> {this.props.project.description} </p>
+            <p 
+            className="project-description" 
+            dangerouslySetInnerHTML={{__html: this.props.project.description}}>
+            </p>
           </a>
           <ul className="project-tags">
             {this.props.projectTags.map(tag => {
