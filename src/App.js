@@ -5,7 +5,7 @@ import ProjectArea from './components/ProjectArea'
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <Header />
         <ProjectArea />
         <footer>
@@ -19,7 +19,7 @@ class App extends React.Component {
           </address>
           
         </footer>
-      </div>
+      </>
     )
   }
 }
