@@ -1,24 +1,10 @@
-@mixin tag($c) {
-  color: $c;
-  border: 1.5px solid $c;
-
-  &:hover {
-    background-color: transparentize($color: $c, $amount: 0.88);
-  }
-
-  &.checked {
-    background-color: $c;
-    box-shadow: inset -50px 0 0 0 $c, inset 50px 0 0 0 $c;
-  }
-}
-
 .tag {
   font-weight: bold;
   position: relative;
   user-select: none;
   display: inline-block;
   padding: 8px 12px;
-  border: 1.5px solid $black;
+  border: 2px solid $black;
   border-radius: 4px;
   color: $black;
   text-align: center;
@@ -28,8 +14,6 @@
   transition: 0.2s;
   width: 100%;
   white-space: nowrap;
-
-  @include tag($black);
 
   &:nth-of-type(1) {
     margin-top: 32px;
@@ -41,8 +25,8 @@
   }
 
   @include tablet {
-    margin: 24px 24px 0 0;
-    padding: 8px 32px;
+    margin: 24px 20px 0 0;
+    padding: 8px 20px;
   }
 
   .tooltip {
@@ -90,6 +74,7 @@
   }
 
   &.checked {
+    background: $black;
     color: $white;
   }
 }
