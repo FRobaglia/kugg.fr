@@ -1,19 +1,19 @@
 /* Vendors */
-@import 'vendors/reset';
+@import "vendors/reset";
 
-@import 'config/mixins';
+@import "config/mixins";
 /* Config */
-@import 'config/fonts';
-@import 'config/variables';
-
+@import "config/fonts";
+@import "config/variables";
 
 /* Components */
-@import 'comps/tags';
-@import 'comps/header';
-@import 'comps/projects';
+@import "comps/tags";
+@import "comps/header";
+@import "comps/projects";
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ body {
   color: $black;
   margin: 8px;
   overflow-x: hidden;
-  font-family: 'Roobert';
+  font-family: "Roobert";
   overflow-y: scroll;
 }
 
@@ -35,7 +35,7 @@ img {
   display: block;
 }
 
-a[href=''] {
+a[href=""] {
   background: red;
 }
 
@@ -45,8 +45,8 @@ footer {
   justify-content: space-between;
 
   a {
-    opacity: .8;
-    transition: opacity .2s;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 
     &:hover {
       text-decoration: underline;

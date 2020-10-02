@@ -2,12 +2,12 @@
   0% {
     transform-origin: center center;
     transform: translateY(20px);
-    opacity: .3
+    opacity: 0.3;
   }
 
   100% {
     transform: none;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -18,10 +18,9 @@
 }
 
 .no-project-found {
-  animation: fadeIn .2s;
+  animation: fadeIn 0.2s;
   margin: 0 0 32px 0;
   font-size: 32px;
-
 
   @include tablet {
     margin: 16px 0 48px 0;
@@ -29,14 +28,14 @@
 }
 
 .project {
-  animation: fadeIn .2s;
+  animation: fadeIn 0.2s;
   width: 100%;
   margin-bottom: 32px;
-  
+
   @include tablet {
     width: calc(50% - 36px);
     margin-right: 36px;
-    
+
     &:nth-child(even) {
       margin-right: 0;
     }
@@ -45,7 +44,7 @@
   @include large {
     width: calc(33% - 44px);
     margin-right: 72px !important;
-    
+
     &:nth-child(3n) {
       margin-right: 0 !important;
     }
@@ -60,8 +59,8 @@
       display: inline-block;
       width: 20px;
       height: 20px;
-      opacity: .67;
-      transition: opacity .2s;
+      opacity: 0.67;
+      transition: opacity 0.2s;
       transform: translateY(2.5px);
 
       img {
@@ -76,13 +75,14 @@
   }
 
   .project-thumbnail {
+    border-radius: 4px;
     object-fit: cover;
     margin-bottom: 16px;
     width: 100%;
 
     @include tablet {
-      opacity: .83;
-      transition: opacity .2s;
+      transform: translateY(0px);
+      transition: all 0.3s ease;
     }
   }
 
@@ -97,12 +97,14 @@
   .project-clickable-area {
     display: block;
 
-    &:hover, &:focus {
-      h2 span{
+    &:hover,
+    &:focus {
+      h2 span {
         text-decoration: underline;
       }
       .project-thumbnail {
-        opacity: 1;
+        box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px);
       }
     }
   }
@@ -111,58 +113,55 @@
 @mixin project-tag($c) {
   color: $c;
 }
-  
+
 .project-tag {
   font-size: 14px;
   user-select: none;
   display: inline-block;
-  margin: 0 8px 8px 0;
+  margin: 0 0px 8px 0;
   outline: none;
   border-radius: 50px;
   white-space: nowrap;
   font-weight: bold;
-  padding-right: 8px;
 
-  &::before {
-    content: '#'
+  &:not(:last-child)::after {
+    content: "\00a0\00a0|\00a0\00a0";
+    color: $black;
   }
 
   &.javascript {
-    @include project-tag($yellow)
+    @include project-tag($yellow);
   }
-  
+
   &.game {
-    @include project-tag($red)
+    @include project-tag($red);
   }
-  
+
   &.react {
-    @include project-tag($blue)
+    @include project-tag($blue);
   }
-  
+
   &.vue {
-    @include project-tag($green)
+    @include project-tag($green);
   }
-  
+
   &.php {
-    @include project-tag($purple)
+    @include project-tag($purple);
   }
 
   &.perso {
-    @include project-tag($black)
+    @include project-tag($black);
   }
 
   &.school {
-    @include project-tag($school)
+    @include project-tag($school);
   }
 
   &.integration {
-    @include project-tag($integration)
+    @include project-tag($integration);
   }
 
   &.lemonde {
-    @include project-tag($le-monde)
+    @include project-tag($le-monde);
   }
-  
-  
 }
-
