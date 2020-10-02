@@ -1,3 +1,17 @@
+@mixin tag($c) {
+  color: $c;
+  border: 2px solid $c;
+
+  &:hover {
+    background-color: transparentize($color: $c, $amount: 0.88);
+  }
+
+  &.checked {
+    background-color: $c;
+    box-shadow: inset -50px 0 0 0 $c, inset 50px 0 0 0 $c;
+  }
+}
+
 .tag {
   font-weight: bold;
   position: relative;
@@ -14,6 +28,8 @@
   transition: 0.2s;
   width: 100%;
   white-space: nowrap;
+
+  @include tag($black);
 
   &:nth-of-type(1) {
     margin-top: 32px;
@@ -74,35 +90,42 @@
   }
 
   &.checked {
-    background: $black;
     color: $white;
   }
 }
 
-// .tag-javascript {
-//   @include tag($black)
-// }
+.tag-javascript {
+  @include tag($javascript);
+}
 
-// .tag-game {
-//   @include tag($black)
-// }
+.tag-game {
+  @include tag($game);
+}
 
-// .tag-react {
-//   @include tag($black)
-// }
+.tag-react {
+  @include tag($react);
+}
 
-// .tag-vue {
-//   @include tag($black)
-// }
+.tag-vue {
+  @include tag($vue);
+}
 
-// .tag-php {
-//   @include tag($black)
-// }
+.tag-php {
+  @include tag($php);
+}
 
-// .tag-perso {
-//   @include tag($black)
-// }
+.tag-perso {
+  @include tag($perso);
+}
 
-// .tag-school {
-//   @include tag($black)
-// }
+.tag-school {
+  @include tag($school);
+}
+
+.tag-integration {
+  @include tag($integration);
+}
+
+.tag-lemonde {
+  @include tag($le-monde);
+}

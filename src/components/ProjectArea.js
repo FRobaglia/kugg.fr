@@ -12,22 +12,21 @@ class ProjectArea extends React.Component {
         {
           slug: "javascript",
           name: "JavaScript",
-          tooltip:
-            'Les projets faits en JavaScript "natif", qui n\'utilisent pas de framework JavaScript externe.',
+          tooltip: "Les projets réalisés en javascript natif.",
           checked: false,
           id: 1,
         },
         {
           slug: "vue",
           name: "Vue.js",
-          tooltip: "Les projets utilisant le framework JavaScript Vue.js.",
+          tooltip: "Les projets réalisés avec le framework JavaScript Vue.js.",
           checked: false,
           id: 2,
         },
         {
           slug: "react",
           name: "React.js",
-          tooltip: "Les projets utilisant le framework JavaScript React.",
+          tooltip: "Les projets réalisés avec le framework JavaScript React.",
           checked: false,
           id: 3,
         },
@@ -41,7 +40,7 @@ class ProjectArea extends React.Component {
         {
           slug: "game",
           name: "Jeux",
-          tooltip: "Les jeux vidéos, ou projets en lien avec le jeu vidéo.",
+          tooltip: "Les jeux vidéos, ou les projets en lien avec le jeu vidéo.",
           checked: false,
           id: 5,
         },
@@ -49,7 +48,7 @@ class ProjectArea extends React.Component {
           slug: "school",
           name: "Projets scolaires",
           tooltip:
-            'Les projets effectués durant des "semaines intensives", période de 4 jours dans le cadre de ma formation durant laquelle un projet est imaginé en partant de zéro, en groupe de 5.',
+            'Les projets réalisés lors de "semaines intensives", période de 4 jours dans le cadre de ma formation durant laquelle un projet est imaginé en partant de zéro, en groupe de 5.',
           checked: false,
           id: 6,
         },
@@ -57,7 +56,7 @@ class ProjectArea extends React.Component {
           slug: "integration",
           name: "Intégration",
           tooltip:
-            "Les projets ayant nécessité une grosse étape d'intégration HTML/CSS (templating HTML, animations CSS...)",
+            "Les projets ayant nécessité une étape d'intégration HTML/CSS importante (templating HTML, animations CSS/SVG...)",
           checked: false,
           id: 7,
         },

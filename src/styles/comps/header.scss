@@ -1,3 +1,51 @@
+header {
+  address {
+    margin-top: 16px;
+    font-size: 14px;
+
+    a {
+      display: inline-block;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    .social {
+      opacity: 0.5;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.github {
+        background-image: url("../../assets/images/github-logo.svg");
+      }
+
+      &.twitter {
+        background-image: url("../../assets/images/twitter-logo.svg");
+      }
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    address {
+      margin-top: 0px;
+    }
+  }
+}
+
 .name {
   font-size: 24px;
   font-weight: bold;

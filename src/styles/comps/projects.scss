@@ -130,27 +130,27 @@
   }
 
   &.javascript {
-    @include project-tag($yellow);
+    @include project-tag($javascript);
   }
 
   &.game {
-    @include project-tag($red);
+    @include project-tag($game);
   }
 
   &.react {
-    @include project-tag($blue);
+    @include project-tag($react);
   }
 
   &.vue {
-    @include project-tag($green);
+    @include project-tag($vue);
   }
 
   &.php {
-    @include project-tag($purple);
+    @include project-tag($php);
   }
 
   &.perso {
-    @include project-tag($black);
+    @include project-tag($perso);
   }
 
   &.school {

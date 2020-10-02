@@ -39,22 +39,6 @@ a[href=""] {
   background: red;
 }
 
-footer {
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-
-  a {
-    opacity: 0.8;
-    transition: opacity 0.2s;
-
-    &:hover {
-      text-decoration: underline;
-      opacity: 1;
-    }
-  }
-}
-
 strong {
   font-weight: bold;
 }
