@@ -1,97 +1,15 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Tag from "./Tag";
 import ProjectCard from "./ProjectCard";
-import projects from "../data/projects";
-
-const tagsArray = [
-  {
-    slug: "javascript",
-    name: "JavaScript",
-    tooltip: "Projets réalisés sans l'utilisation de framework front-end",
-    checked: false,
-    id: 1,
-  },
-  {
-    slug: "vue",
-    name: "Vue.js",
-    tooltip: "Projets réalisés avec le framework JavaScript Vue.js",
-    checked: false,
-    id: 2,
-  },
-  {
-    slug: "react",
-    name: "React.js",
-    tooltip: "Projets réalisés avec le framework JavaScript React",
-    checked: false,
-    id: 3,
-  },
-  {
-    slug: "php",
-    name: "PHP",
-    tooltip: "Projets utilisant PHP et/ou le CMS Wordpress.",
-    checked: false,
-    id: 4,
-  },
-  {
-    slug: "game",
-    name: "Jeux",
-    tooltip: "Jeux vidéos et autres projets en lien avec le jeu vidéo.",
-    checked: false,
-    id: 5,
-  },
-  {
-    slug: "school",
-    name: "Projets scolaires",
-    tooltip:
-      'Projets réalisés durant mes 3 ans en école',
-    checked: false,
-    id: 6,
-  },
-  {
-    slug: "integration",
-    name: "Intégration",
-    tooltip:
-      "Projets ayant nécessité une étape d'intégration HTML/CSS importante (templating HTML, animations CSS/SVG...)",
-    checked: false,
-    id: 7,
-  },
-  {
-    slug: "lemonde",
-    name: "Le Monde",
-    tooltip:
-      "Projets sur lesquels j'ai travaillé durant mon alternance au journal Le Monde",
-    checked: false,
-    id: 8,
-  },
-  {
-    slug: "perso",
-    name: "Projets personnels",
-    tooltip: "Projets développés sur mon temps libre",
-    checked: false,
-    id: 9,
-  },
-]
 
 function ProjectArea() {
+  const { t } = useTranslation()
+  const projects = t("projects", {returnObjects: true})
+  const tagsArray = t("tags", {returnObjects: true})
+  
   const [tags, setTags] = useState(tagsArray)
 
-  function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
-  }
 
   function handleTagClick(tagId) {
     setTags(tags.map(tag => {
@@ -100,8 +18,6 @@ function ProjectArea() {
   }
 
   function getProjectsThatShouldAppear() {
-    shuffle(projects)
-
     function isChecked(tag) {
       return tag.checked;
     }
@@ -194,7 +110,7 @@ function ProjectArea() {
         {!atLeastOneProjectIsShowing() ? (
           <div className="no-project-found">
             {" "}
-            Aucun projet ne comporte ces{" "}
+            {t("noProjectFound")}{" "}
             {tags.filter((tag) => tag.checked).length} tags.
           </div>
         ) : null}

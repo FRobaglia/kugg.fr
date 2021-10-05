@@ -22,11 +22,11 @@
   border-radius: 4px;
   color: $black;
   text-align: center;
-  margin: 8px 0;
+  margin: 12px 12px 0 0;
+  width: auto;
   outline: none;
   cursor: pointer;
   transition: 0.2s;
-  width: 100%;
   white-space: nowrap;
 
   @include tag($black);
@@ -34,12 +34,7 @@
   &:nth-of-type(1) {
     margin-top: 32px;
   }
-
-  @include phone {
-    margin: 12px 12px 0 0;
-    width: auto;
-  }
-
+  
   @include tablet {
     margin: 24px 20px 0 0;
     padding: 8px 20px;

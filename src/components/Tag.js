@@ -1,6 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Tag(props) {
+  const { t } = useTranslation();
+
+  const tagTranslation = t("tags", { returnObjects: true})[props.tag.id - 1]
+
   return (
     <li
       onClick={props.onClick}
@@ -8,8 +13,8 @@ function Tag(props) {
         props.tag.checked ? "checked" : ""
       }`}
     >
-      <div className="tooltip"> {props.tag.tooltip} </div>
-      {props.tag.name}
+      <div className="tooltip"> {tagTranslation.tooltip} </div>
+      {tagTranslation.name}
     </li>
   );
 }
