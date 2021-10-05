@@ -14,7 +14,7 @@ const projects = [
     slug: "hero",
     alt: "Aventure - le jeu dont vous êtes le héros",
     description:
-      'Inspiré des "Livres dont vous êtes le héros", mais sous forme de site internet, vous incarnez un Mage, un Guerrier ou un Voleur, chacun ayant une caractéristique prédominante. Le but du jeu est de venir en aide à un village dont les habitants disparaissent mystérieusement. Pour ce faire, il faudra utiliser vos caractéristiques à bon escient...',
+      'Une aventure inspirée des "Livres dont vous êtes le héros". <br> Faites les bons choix pour finir le jeu !',
     link: "https://herobaglia.netlify.com",
     github: "https://github.com/FRobaglia/hero",
     tags: ["game", "vue", "perso"],
@@ -35,7 +35,7 @@ const projects = [
     slug: "le-valais",
     alt: "Page d'accueil - Le Valais",
     description:
-      "En collaboration avec l'Office de Tourisme de Suisse, pour faire découvrir la région du Valais aux lecteurs du Monde et M, le magazine du Monde.",
+      "En collaboration avec l'Office de Tourisme de Suisse, pour faire découvrir la région du Valais aux lecteurs du Monde et de M, le magazine du Monde.",
     link: "https://valais-ete-ombre-des-sommets.lemonde.fr/",
     tags: ["javascript", "integration", "lemonde"],
     id: 4,
@@ -54,10 +54,10 @@ const projects = [
   {
     title: "One Influence",
     slug: "one-influence",
-    alt: "Page d'accueil - One Influence 2020",
+    alt: "Page d'accueil - One Influence",
     description:
       "L'étude OneNext Influence réalisée par M Publicité affirme la place prépondérante du Monde, de M Le magazine du Monde et de L’Obs auprès de ceux qui « changent la donne ».",
-    link: "https://mpublicite.fr/one-influence-2020/",
+    link: "https://mpublicite.fr/one-influence/",
     tags: ["javascript", "integration", "lemonde"],
     id: 6,
   },
@@ -76,7 +76,7 @@ const projects = [
     slug: "fatfinger",
     alt: "Page d'accueil - FatFinger",
     description:
-      "Un jeu d'adresse pour s'entraîner en dactylographie, vous avez 30 secondes pour taper le plus de mots possibles au clavier. Trois collections de mots différentes sont jouables : les mots anglais les plus utilisés selon Wikipédia, des mots en rapport avec le web et/ou le développement web, et des expressions JavaScript.",
+      "Un jeu d'adresse pour s'entraîner en dactylographie, le but est de taper le plus de mots possibles au clavier en 30 secondes. Trois collections de mots différentes sont jouables : les mots anglais les plus utilisés selon Wikipédia, des mots en rapport avec le web et/ou le développement web, et des expressions JavaScript.",
     link: "https://fatfinger.netlify.com",
     github: "https://github.com/FRobaglia/FatFinger",
     tags: ["javascript", "game", "perso"],
@@ -98,7 +98,7 @@ const projects = [
     slug: "uryo",
     alt: "Homepage Uryo - Maquettes Figma",
     description:
-      "<strong> Projet de groupe. </strong> Semaine intensive d'UX (User eXperience) dans le cadre de mon école. Nous avions 4 jours pour penser, designer et intégrer un site web de customisation de vêtements. Nous avons imaginé Uryō, des imperméables conçus avec des encres thermochromiques, qui dévoilent un nouveau design lorsqu'il pleut. Cette semaine étant essentiellement basée sur l'UX/UI, nous avons seulement intégré la page d'accueil d'Uryō.",
+      "<strong> Projet de groupe. </strong> Semaine intensive d'UX (User eXperience) dans le cadre de mon école. Nous avons imaginé Uryō, des imperméables conçus avec des encres thermochromiques, qui dévoilent un nouveau design lorsqu'il pleut. Cette semaine étant essentiellement basée sur l'UX/UI, nous avons seulement intégré la page d'accueil d'Uryō.",
     link: "https://uryo.netlify.com",
     github: "https://github.com/FRobaglia/uryo",
     tags: ["javascript", "school", "integration"],
@@ -119,7 +119,7 @@ const projects = [
     slug: "keycodes",
     alt: "Site web Keycodes",
     description:
-      'Un mini-outil pour connaître les différents "keyCode" des touches en JavaScript. (identifiant numérique que le langage donne arbitrairement à chaque touche du clavier).',
+      'Un mini-outil pour connaître les différents "keyCode" des touches en JavaScript.',
     link: "https://keycode.netlify.com",
     github: "https://github.com/FRobaglia/KeyCodes",
     tags: ["javascript"],

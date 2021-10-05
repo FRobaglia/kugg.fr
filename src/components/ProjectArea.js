@@ -1,151 +1,132 @@
-import React from "react";
+import React, { useState } from "react";
 import Tag from "./Tag";
 import ProjectCard from "./ProjectCard";
 import projects from "../data/projects";
 
-class ProjectArea extends React.Component {
-  constructor(props) {
-    super(props);
+const tagsArray = [
+  {
+    slug: "javascript",
+    name: "JavaScript",
+    tooltip: "Projets réalisés sans l'utilisation de framework front-end",
+    checked: false,
+    id: 1,
+  },
+  {
+    slug: "vue",
+    name: "Vue.js",
+    tooltip: "Projets réalisés avec le framework JavaScript Vue.js",
+    checked: false,
+    id: 2,
+  },
+  {
+    slug: "react",
+    name: "React.js",
+    tooltip: "Projets réalisés avec le framework JavaScript React",
+    checked: false,
+    id: 3,
+  },
+  {
+    slug: "php",
+    name: "PHP",
+    tooltip: "Projets utilisant PHP et/ou le CMS Wordpress.",
+    checked: false,
+    id: 4,
+  },
+  {
+    slug: "game",
+    name: "Jeux",
+    tooltip: "Jeux vidéos et autres projets en lien avec le jeu vidéo.",
+    checked: false,
+    id: 5,
+  },
+  {
+    slug: "school",
+    name: "Projets scolaires",
+    tooltip:
+      'Projets réalisés durant mes 3 ans en école',
+    checked: false,
+    id: 6,
+  },
+  {
+    slug: "integration",
+    name: "Intégration",
+    tooltip:
+      "Projets ayant nécessité une étape d'intégration HTML/CSS importante (templating HTML, animations CSS/SVG...)",
+    checked: false,
+    id: 7,
+  },
+  {
+    slug: "lemonde",
+    name: "Le Monde",
+    tooltip:
+      "Projets sur lesquels j'ai travaillé durant mon alternance au journal Le Monde",
+    checked: false,
+    id: 8,
+  },
+  {
+    slug: "perso",
+    name: "Projets personnels",
+    tooltip: "Projets développés sur mon temps libre",
+    checked: false,
+    id: 9,
+  },
+]
 
-    this.state = {
-      tags: [
-        {
-          slug: "javascript",
-          name: "JavaScript",
-          tooltip: "Les projets réalisés en javascript natif.",
-          checked: false,
-          id: 1,
-        },
-        {
-          slug: "vue",
-          name: "Vue.js",
-          tooltip: "Les projets réalisés avec le framework JavaScript Vue.js.",
-          checked: false,
-          id: 2,
-        },
-        {
-          slug: "react",
-          name: "React.js",
-          tooltip: "Les projets réalisés avec le framework JavaScript React.",
-          checked: false,
-          id: 3,
-        },
-        {
-          slug: "php",
-          name: "PHP",
-          tooltip: "Les projets utilisant PHP et/ou le CMS Wordpress.",
-          checked: false,
-          id: 4,
-        },
-        {
-          slug: "game",
-          name: "Jeux",
-          tooltip: "Les jeux vidéos, ou les projets en lien avec le jeu vidéo.",
-          checked: false,
-          id: 5,
-        },
-        {
-          slug: "school",
-          name: "Projets scolaires",
-          tooltip:
-            'Les projets réalisés lors de "semaines intensives", période de 4 jours dans le cadre de ma formation durant laquelle un projet est imaginé en partant de zéro, en groupe de 5.',
-          checked: false,
-          id: 6,
-        },
-        {
-          slug: "integration",
-          name: "Intégration",
-          tooltip:
-            "Les projets ayant nécessité une étape d'intégration HTML/CSS importante (templating HTML, animations CSS/SVG...)",
-          checked: false,
-          id: 7,
-        },
-        {
-          slug: "lemonde",
-          name: "Le Monde",
-          tooltip:
-            "Les projets sur lesquels j'ai travaillé durant mon alternance au Monde.",
-          checked: false,
-          id: 8,
-        },
-        {
-          slug: "perso",
-          name: "Projets personnels",
-          tooltip: "Les projets développés sur mon temps libre.",
-          checked: false,
-          id: 9,
-        },
-      ],
-    };
+function ProjectArea() {
+  const [tags, setTags] = useState(tagsArray)
 
-    this.handleTagClick = this.handleTagClick.bind(this);
+  function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
   }
 
-  render() {
-    return (
-      <div className="project-area">
-        <ul className="tags">
-          {this.state.tags.map((tag) => {
-            return (
-              <Tag
-                onClick={() => {
-                  this.handleTagClick(tag.id);
-                }}
-                key={tag.id}
-                tag={tag}
-              />
-            );
-          })}
-        </ul>
-
-        <div className="projects">
-          {this.getProjectsThatShouldAppear()}
-          {!this.atLeastOneProjectIsShowing() ? (
-            <div className="no-project-found">
-              {" "}
-              Aucun projet ne comporte ces{" "}
-              {this.state.tags.filter((tag) => tag.checked).length} tags.
-            </div>
-          ) : null}
-        </div>
-      </div>
-    );
+  function handleTagClick(tagId) {
+    setTags(tags.map(tag => {
+      return (tag.id === tagId ? { ...tag, checked: !tag.checked } : tag)
+    }),)
   }
 
-  handleTagClick(tagId) {
-    this.setState((prevState) => ({
-      tags: prevState.tags.map((tag) =>
-        tag.id === tagId ? { ...tag, checked: !tag.checked } : tag
-      ),
-    }));
-  }
+  function getProjectsThatShouldAppear() {
+    shuffle(projects)
 
-  getProjectsThatShouldAppear() {
     function isChecked(tag) {
       return tag.checked;
     }
-
+    
     return projects.map((project) => {
-      if (!this.state.tags.some(isChecked))
+      if (!tags.some(isChecked))
         return (
           <ProjectCard
             key={project.id}
             project={project}
-            projectTags={this.getTags(project)}
+            projectTags={getTags(project)}
           />
         );
 
       if (
-        this.allSlugsAreInArray(
+        allSlugsAreInArray(
           project.tags,
-          this.state.tags.filter((tag) => tag.checked)
+          tags.filter((tag) => tag.checked)
         )
       )
         return (
           <ProjectCard
             key={project.id}
             project={project}
-            projectTags={this.getTags(project)}
+            projectTags={getTags(project)}
           />
         );
 
@@ -153,13 +134,13 @@ class ProjectArea extends React.Component {
     });
   }
 
-  atLeastOneProjectIsShowing() {
+  function atLeastOneProjectIsShowing() {
     let showing = false;
     projects.forEach((project) => {
       if (
-        this.allSlugsAreInArray(
+        allSlugsAreInArray(
           project.tags,
-          this.state.tags.filter((tag) => tag.checked)
+          tags.filter((tag) => tag.checked)
         )
       )
         showing = true;
@@ -168,20 +149,20 @@ class ProjectArea extends React.Component {
     return showing;
   }
 
-  allSlugsAreInArray(slugs, tagsArray) {
-    // Find if all given slugs are in the array tagsArray (which should be currently checked tags)
-    return tagsArray.every((tag) => slugs.includes(tag.slug));
+  function allSlugsAreInArray(slugs, tagsArr) {
+    // Find if all given slugs are in the array tagsArr (which should be currently checked tags)
+    return tagsArr.every((tag) => slugs.includes(tag.slug));
   }
 
-  getTags(project) {
+  function getTags(project) {
     return project.tags.map((slug) => {
-      return this.findTagBySlug(slug, this.state.tags);
+      return findTagBySlug(slug, tags);
     });
   }
 
-  findTagBySlug(slug, tags) {
-    for (var i = 0; i < tags.length; i++) {
-      const tag = tags[i];
+  function findTagBySlug(slug, tagsArr) {
+    for (var i = 0; i < tagsArr.length; i++) {
+      const tag = tagsArr[i];
       if (tag.slug === slug) {
         return tag;
       }
@@ -190,6 +171,36 @@ class ProjectArea extends React.Component {
     console.error(`${slug} | Ce tag est invalide.`);
     return undefined;
   }
+  
+  
+  return (
+    <div className="project-area">
+      <ul className="tags">
+        {tags.map((tag) => {
+          return (
+            <Tag
+              onClick={() => {
+                handleTagClick(tag.id);
+              }}
+              key={tag.id}
+              tag={tag}
+            />
+          );
+        })}
+      </ul>
+
+      <div className="projects">
+        {getProjectsThatShouldAppear()}
+        {!atLeastOneProjectIsShowing() ? (
+          <div className="no-project-found">
+            {" "}
+            Aucun projet ne comporte ces{" "}
+            {tags.filter((tag) => tag.checked).length} tags.
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
 }
 
 export default ProjectArea;
