@@ -3,6 +3,9 @@ const translations = {
         translation: {
             jobTitle: "Web developer",
             noProjectFound: "Couldn't find a project containing these",
+            discoverWebsite: "See website",
+            seeSourceCode: "Explore source code of",
+            onGithub: "on GitHub",
             projects: [
                 {
                   title: "M Publicité",
@@ -86,6 +89,7 @@ const translations = {
                   github: "https://github.com/FRobaglia/FatFinger",
                   tags: ["javascript", "game", "perso"],
                   id: 8,
+                  en: true
                 },
                 {
                   title: "TFT Legends",
@@ -97,6 +101,7 @@ const translations = {
                   github: "https://github.com/FRobaglia/tftlegends",
                   tags: ["game", "vue", "php", "perso"],
                   id: 9,
+                  en: true
                 },
                 {
                   title: "Uryō",
@@ -108,16 +113,62 @@ const translations = {
                   github: "https://github.com/FRobaglia/uryo",
                   tags: ["javascript", "school", "integration"],
                   id: 10,
+                  en: true
                 },
                 {
                   title: "Snake",
                   slug: "snake",
                   alt: "Snake Game",
-                  description: "Snake Game in JavaScript.",
+                  description: "Snake game in JavaScript.",
                   link: "https://snakee.netlify.com",
                   github: "https://github.com/FRobaglia/snake",
                   tags: ["javascript", "game", "perso"],
                   id: 11,
+                  en: true
+                },
+                {
+                  title: "Chess",
+                  slug: "chess",
+                  alt: "Chess Game",
+                  description:
+                    'Chess game in JavaScript.',
+                  link: "https://chessr.netlify.app/",
+                  github: "https://github.com/FRobaglia/chess",
+                  tags: ["javascript", "game", "perso"],
+                  id: 12,
+                  en: true
+                },
+                {
+                  title: "Learmy",
+                  slug: "learmy",
+                  alt: "Homepage - Learmy",
+                  description:
+                    'A website that uses NASA\'s API Picture Of The Day and display new pictures every day.',
+                  link: "https://learmy.netlify.app/astronomy-picture-of-the-day",
+                  github: "https://github.com/FRobaglia/learmy",
+                  tags: ["vue", "perso", "integration"],
+                  id: 13,
+                  en: true
+                },
+                {
+                  title: "Wallonia",
+                  slug: "wallonie",
+                  alt: "Homepage - Wallonia",
+                  description:
+                    'In collaboration with the Belgium Tourist Office, this website aims to make HuffPost readers discover about Wallonia.',
+                  link: "https://lavieestbelge-en-wallonie.huffingtonpost.fr/",
+                  tags: ["javascript" ,"lemonde", "integration"],
+                  id: 14
+                },
+                {
+                  title: "Swiss cities discover themselves",
+                  slug: "suisse",
+                  alt: "Homepage - Swiss cities discover themselves",
+                  description:
+                    'In collaboration with the Swiss Tourist Office, this website aims to make Le Monde readers discover about Switzerland.',
+                  link: "https://les-villes-suisses-se-decouvrent.lemonde.fr/",
+                  tags: ["javascript" ,"lemonde", "integration"],
+                  id: 15
                 },
                 {
                   title: "Keycodes",
@@ -128,7 +179,8 @@ const translations = {
                   link: "https://keycode.netlify.com",
                   github: "https://github.com/FRobaglia/KeyCodes",
                   tags: ["javascript"],
-                  id: 12,
+                  id: 16,
+                  en: true
                 },
               ],
               tags: [
@@ -205,6 +257,9 @@ const translations = {
         translation: {
             jobTitle: "Développeur web",
             noProjectFound: "Aucun projet ne comporte ces",
+            discoverWebsite: "Voir le site web",
+            seeSourceCode: "Explorer le code source de",
+            onGithub: "sur GitHub",
             projects: [
                 {
                   title: "M Publicité",
@@ -322,6 +377,49 @@ const translations = {
                   id: 11,
                 },
                 {
+                  title: "Échecs",
+                  slug: "chess",
+                  alt: "Jeu d'échecs",
+                  description:
+                    'Le jeu d\'échecs en JavaScript.',
+                  link: "https://chessr.netlify.app/",
+                  github: "https://github.com/FRobaglia/chess",
+                  tags: ["javascript", "game", "perso"],
+                  id: 12
+                },
+                {
+                  title: "Learmy",
+                  slug: "learmy",
+                  alt: "Homepage - Learmy",
+                  description:
+                    'Un site utilisant l\'API Picture Of The Day de la NASA et affichant chaque jour de nouvelles photos.',
+                  link: "https://learmy.netlify.app/astronomy-picture-of-the-day",
+                  github: "https://github.com/FRobaglia/learmy",
+                  tags: ["vue", "perso", "integration"],
+                  id: 13,
+                  en: true
+                },
+                {
+                  title: "Wallonie : la vie est belge",
+                  slug: "wallonie",
+                  alt: "Homepage - Wallonie",
+                  description:
+                    'En collaboration avec l\'Office de Tourisme de Belgique, pour faire découvrir la Wallonie aux lecteurs du HuffPost.',
+                  link: "https://lavieestbelge-en-wallonie.huffingtonpost.fr/",
+                  tags: ["javascript" ,"lemonde", "integration"],
+                  id: 14
+                },
+                {
+                  title: "Les villes suisses se découvrent",
+                  slug: "suisse",
+                  alt: "Homepage - Les villes suisses se découvrent",
+                  description:
+                    'En collaboration avec l\'Office de Tourisme de Suisse, pour faire découvrir les villes suisses aux lecteurs du Monde et de M, le magazine du Monde.',
+                  link: "https://les-villes-suisses-se-decouvrent.lemonde.fr/",
+                  tags: ["javascript" ,"lemonde", "integration"],
+                  id: 15
+                },
+                {
                   title: "Keycodes",
                   slug: "keycodes",
                   alt: "Site web Keycodes",
@@ -330,7 +428,7 @@ const translations = {
                   link: "https://keycode.netlify.com",
                   github: "https://github.com/FRobaglia/KeyCodes",
                   tags: ["javascript"],
-                  id: 12,
+                  id: 16,
                 },
               ],
               tags: [

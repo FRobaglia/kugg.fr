@@ -11,6 +11,17 @@
   }
 }
 
+.click-here {
+  background: transparent;
+  outline: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .projects {
   display: flex;
   flex-flow: row wrap;

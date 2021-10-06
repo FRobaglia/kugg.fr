@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 function Tag(props) {
   const { t } = useTranslation();
 
-  const tagTranslation = t("tags", { returnObjects: true})[props.tag.id - 1]
+  const tagTranslation = t("tags", { returnObjects: true}).find(tag => tag.id === props.tag.id)
 
   return (
     <li

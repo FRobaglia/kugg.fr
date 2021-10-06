@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 import Tag from "./Tag";
 import ProjectCard from "./ProjectCard";
 
@@ -9,7 +10,7 @@ function ProjectArea() {
   const tagsArray = t("tags", {returnObjects: true})
   
   const [tags, setTags] = useState(tagsArray)
-
+  const [englishOnly, setEnglishOnly] = useState(false)
 
   function handleTagClick(tagId) {
     setTags(tags.map(tag => {
@@ -23,7 +24,10 @@ function ProjectArea() {
     }
     
     return projects.map((project) => {
-      if (!tags.some(isChecked))
+
+      if ((i18n.language === "en" && englishOnly && !project.en)) return null // Don't show if user wants english-only and project isn't in english
+
+      if (!tags.some(isChecked)) // Show every project if no tags are checked
         return (
           <ProjectCard
             key={project.id}
@@ -38,13 +42,14 @@ function ProjectArea() {
           tags.filter((tag) => tag.checked)
         )
       )
-        return (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            projectTags={getTags(project)}
-          />
-        );
+      
+      return (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          projectTags={getTags(project)}
+        />
+      );
 
       return null;
     });
@@ -104,6 +109,18 @@ function ProjectArea() {
           );
         })}
       </ul>
+      
+      {i18n.language === "en" && !englishOnly && 
+        <div style={{marginTop: "24px"}}>To hide projects using French,&nbsp;
+          <button class="click-here" onClick={() => setEnglishOnly(!englishOnly)}>click here</button> 
+        </div>
+      }
+      
+      {i18n.language === "en" && englishOnly && 
+        <div style={{marginTop: "24px"}}>
+          <button class="click-here" onClick={() => setEnglishOnly(!englishOnly)}>Show all projects again</button> 
+        </div>
+      }
 
       <div className="projects">
         {getProjectsThatShouldAppear()}

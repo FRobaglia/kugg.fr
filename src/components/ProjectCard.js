@@ -1,12 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard(props) {
+    const { t } = useTranslation();
     return (
       <article className="project">
         <a
           target="_blank"
           rel="noopener"
-          title={`${props.project.title} — Découvrir le site web`}
+          title={`${props.project.title} — ${t("discoverWebsite")}`}
           href={props.project.link}
           className="project-clickable-area"
         >
@@ -23,7 +25,7 @@ function ProjectCard(props) {
                 href={props.project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={`Explorer le code source de '${props.project.title}' sur GitHub`}
+                title={`${t("seeSourceCode")} '${props.project.title}' ${t("onGithub")}`}
               >
                 <img
                   alt="GitHub"
@@ -37,15 +39,18 @@ function ProjectCard(props) {
             dangerouslySetInnerHTML={{ __html: props.project.description }}
           ></p>
         </a>
+
         <ul className="project-tags">
-          {props.projectTags.map((tag) => {
+          {props.projectTags.map((ptag) => {
+            const tagTranslation = t("tags", { returnObjects: true}).find(tag => tag.id === ptag.id)
             return (
-              <li key={tag.id} className={`project-tag ${tag.slug}`}>
-                {tag.name}
+              <li key={ptag.id} className={`project-tag ${ptag.slug}`}>
+                {tagTranslation.name}
               </li>
             );
           })}
         </ul>
+
       </article>
     );
 }
